@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倉庫番</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>倉庫番</h1>
+      <div id="status">
+        <span>ステージ: <strong id="stage-num">1</strong></span>
+        <span>手数: <strong id="move-count">0</strong></span>
+      </div>
+    </header>
+
+    <div id="game-area">
+      <canvas id="game-canvas"></canvas>
+    </div>
+
+    <div id="controls">
+      <button id="btn-restart">リスタート (R)</button>
+      <button id="btn-prev" disabled>前のステージ</button>
+      <button id="btn-next" disabled>次のステージ</button>
+    </div>
+
+    <div id="key-hint">
+      ← → ↑ ↓ で移動 &nbsp;|&nbsp; R でリスタート &nbsp;|&nbsp; Z で1手戻す
+    </div>
+
+    <div id="clear-modal" class="hidden">
+      <div class="modal-box">
+        <h2>ステージクリア！</h2>
+        <p><span id="clear-moves"></span> 手でクリアしました</p>
+        <button id="btn-modal-next">次のステージへ</button>
+        <button id="btn-modal-restart">もう一度</button>
+      </div>
+    </div>
+
+    <div id="all-clear-modal" class="hidden">
+      <div class="modal-box">
+        <h2>全ステージクリア！</h2>
+        <p>おめでとうございます！</p>
+        <button id="btn-all-restart">最初から</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

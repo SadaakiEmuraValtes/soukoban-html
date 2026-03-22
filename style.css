@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1a1a2e;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+#app {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #e2b96f;
+  letter-spacing: 4px;
+  text-shadow: 0 0 12px #d4a03088;
+}
+
+#status {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+#status span {
+  color: #aaa;
+}
+
+#status strong {
+  color: #e2b96f;
+}
+
+#game-area {
+  background: #16213e;
+  border: 2px solid #e2b96f44;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-canvas {
+  display: block;
+  image-rendering: pixelated;
+}
+
+#controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background: #0f3460;
+  color: #e2b96f;
+  border: 1px solid #e2b96f66;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+  background: #1a4d8a;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+#key-hint {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+/* モーダル */
+#clear-modal,
+#all-clear-modal {
+  position: fixed;
+  inset: 0;
+  background: #000a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#clear-modal.hidden,
+#all-clear-modal.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: #16213e;
+  border: 2px solid #e2b96f;
+  border-radius: 16px;
+  padding: 40px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 0 40px #e2b96f44;
+}
+
+.modal-box h2 {
+  font-size: 1.8rem;
+  color: #e2b96f;
+}
+
+.modal-box p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.modal-box button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
